@@ -23,6 +23,9 @@ RUN conda create -n myenv python=3.10
 # 激活虚拟环境，使用新的 SHELL 环境
 SHELL ["conda", "run", "-n", "myenv", "/bin/bash", "-c"]
 
+# 安装 gradio
+RUN pip3 install gradio
+
 # 设置工作目录
 WORKDIR /app
 
